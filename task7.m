@@ -1,5 +1,5 @@
 
-filter = @(roots)roots==real(roots);
+filter = @(m_roots)m_roots==real(m_roots);
 syms x
 P = x^(3) - 6*x^(2)+15*x - 14;
 plot_by_roots(P, filter);
