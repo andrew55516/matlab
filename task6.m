@@ -1,9 +1,11 @@
-my_taylor(exp(x), 0, 6);
-my_taylor((sin(x)).^2, 0, 11);
+syms x
 
+disp('1)');
+F = exp(x);
+n = 6;
+disp(taylor(F, 'order', n));
 
-function [] = my_taylor(func, start, n)
-    syms x
-    disp(func);
-    disp(taylor(func, x, start, 'Order', n));
-end
+disp('2)');
+F = (sin(x)).^2;
+n = 11;
+disp(taylor(F, 'order', n));
